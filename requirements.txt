@@ -1,0 +1,12 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+Flask==2.0.2
+gunicorn==20.1.0
+matplotlib==3.4.1
+mmcv-full==1.4.4
+numpy
+requests==2.25.1
+requests-oauthlib==1.3.0
+torch==1.10.2+cpu
+torchvision==0.11.3+cpu
+Werkzeug==2.0.2
+-e git+https://github.com/open-mmlab/mmdetection.git@ff9bc39913cb3ff5dde79d3933add7dc2561bab7#egg=mmdet

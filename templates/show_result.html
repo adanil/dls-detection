@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection</title>
+
+    <style>
+
+
+        .parent {
+              /*border: 1px solid black;*/
+              margin: 1rem;
+              padding: 2rem 2rem;
+              text-align: center;
+        }
+        .pic {
+            font-family: Montserrat;
+            color: slateblue;
+            display: inline-block;
+            padding: 10rem 5rem;
+            vertical-align: middle;
+        }
+
+        .logo {
+            margin-left: 15px;
+            font-family: Montserrat;
+            color: slateblue;
+        }
+
+        img {
+            display: block;
+            max-width:700px;
+            max-height:700px;
+            width: auto;
+            height: auto;
+        }
+
+
+
+        body {
+            /*display: flex;*/
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            /*overflow: hidden;*/
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <h1><a href="/">Detection</a></h1>
+    </div>
+    <div class='parent'>
+        <div class="pic">
+            <h1>Source image </h1>
+            <img src="{{ was }}" alt="Source image">
+        </div>
+        <div class="pic">
+            <h1>Result image </h1>
+            <img src="{{ result }}" alt="Result image">
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detection</title>
+
+    <style>
+        label {
+            float: left;
+            display: block;
+            width: 60vw;
+            max-width: 300px;
+            font-family: Montserrat;
+            color: aliceblue;
+            margin: 0 auto;
+            background-color: slateblue;
+            border-radius: 35px;
+            font-size: 1em;
+            line-height: 2.5em;
+            text-align: center;
+        }
+
+        label:hover {
+            background-color: cornflowerblue;
+        }
+
+        label:active {
+            background-color: mediumaquamarine;
+        }
+
+        input {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+
+        #process {
+            max-width: 100px;
+            margin-left: 15px;
+        }
+
+        .messages {
+            margin-top: 100px;
+            margin-left: -300px;
+            color: red;
+        }
+
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <form method=post enctype=multipart/form-data>
+        <label><input type='file' name='file'>Load file</label>
+        <label id="process"><input type=submit value=Upload>Process</label>
+    </form>
+    {% for msg in get_flashed_messages() %}
+    <div class = 'messages'>{{msg}} </div>
+    {% endfor %}
+</body>
+</html>
